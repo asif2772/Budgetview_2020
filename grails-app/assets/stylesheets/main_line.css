@@ -1,0 +1,303 @@
+#header-inner {
+    height: 66px;
+}
+#content-whole {
+    width: 100%;
+    background: #ffffff;
+    float: left;
+}
+#content-whole-inner {
+    width: 100%;
+    /*background: url(../images/content-bg-right.png) right 0px no-repeat;*/
+    float: left;
+    margin-top: 0px;
+}
+h1 {
+    color: #4FA2CF;
+    font-size: 18px;
+    font-weight: bold;
+}
+.content {
+    width: 1000px;
+    margin-top: 25px;
+    background: #f4f4f4;
+    border: 1px solid #dddddd;
+    /*border: 1px solid #ff0000;*/
+    margin-bottom: 20px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.logoDiv {
+    margin: auto;
+    width: 1000px;
+    padding-top: 20px;
+    height: 58px;
+}
+.logoDivLeft {
+    width: 179px;
+    height: 58px;
+    float: left;
+}
+.logoDivRight {
+    padding-top: 30px;
+    line-height: 28px;
+    height: 58px;
+    width: 30px;
+    float: right;
+}
+.logoDivRight span {
+    width: 20px;
+    float: left;
+}
+.flagEnglish {
+    background: url(../images/flags.png) no-repeat;
+    border: 2px solid #EEEEEE;
+    float: right;
+    height: 11px;
+    margin-top: 15px;
+    width: 16px;
+    background-position: -176px -44px;
+}
+.flagNetherlands {
+    background: url("../images/flags.png") no-repeat;
+    border: 2px solid #EEEEEE;
+    float: right;
+    height: 11px;
+    margin-top: 15px;
+    margin-right: 5px;
+    width: 16px;
+    background-position: -80px -110px;
+}
+
+/* NAVIGATION MENU */
+.nav {
+    background: #B7CBE3 url(../images/menu-bg-arrow.png) no-repeat;
+    height: 24px;
+    padding: 10px 0;
+
+    width: 100%;
+    float: left;
+}
+.nav1 {
+    background: #B7CBE3 url(../images/menu-bg-arrow.png) no-repeat;
+    height: 24px;
+    padding: 10px 0;
+
+    width: 100%;
+    float: left;
+}
+.fieldcontain {
+
+    float: left;
+    width: 33%;
+    min-height: 28px;
+}
+.fieldcontain1 {
+    /*float: left;*/   /*****MC****/
+    min-height: 28px;
+    width: 66%;
+}
+.fieldcontain2 {
+    float: left;
+    min-height: 28px;
+    width: 50%;
+    display: block;
+}
+.fieldcontain label, .fieldcontain .property-label {
+
+    width: 137px !important;
+    font-size: 12px;
+    margin-left: 5px;
+}
+input, textarea {
+    border: 1px solid #cccccc;
+    font-size: 12px;
+    height: 25px;
+    /*height: 17px;*/
+
+}
+.fieldcontain input, textarea {
+
+    font-size: 12px;
+    color: #7d7d7d;
+    width: 150px;
+    height: 17px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.fieldcontain input[type="submit"] {
+    color: #444;
+    height: 23px;
+    width: auto;
+}
+select {
+    background-color: #fcfcfc;
+    border: 1px solid #cccccc;
+    font-size: 12px;
+    /* padding: 0.2em 0.4em;*/
+    width: 162px;
+    height: 24px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    color: #7d7d7d;
+}
+.required select {
+    background-color: #fcfcfc;
+    border: 1px solid #FFAAAA;
+    font-size: 12px;
+    /* padding: 0.2em 0.4em;*/
+    width: 162px;
+    height: 24px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    color: #7d7d7d;
+}
+td, th {
+
+    text-align: left;
+}
+th {
+    font-size: 12px;
+    line-height: 20px;
+}
+.buttons input,.buttons a {
+    background: #82accb;
+    background: -webkit-gradient(linear, left top, left bottom, from(#c3d9e8), to(#82accb));
+}
+
+fieldset.buttons {
+    text-align: center;
+}
+
+fieldset.addmore {
+    width: 96%;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+input.addmore {
+    height: 23px;
+    width: 19px;
+}
+
+#childList {
+    width: 96%;
+    background: #f6f6f6;
+    padding: 2%;
+    margin-top: 10px;
+
+}
+
+.addedlist {
+    text-align: right;
+    margin: 3px;
+}
+
+#list-page-body-inner {
+}
+
+#list-page {
+    width: auto;
+    /*
+        min-height: 100px;*/
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.listoddbox {
+    background-color: #ffffff;
+    border-bottom: 1px solid #d9d9d9;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    width: auto;
+    height: 34px;
+}
+
+.listevenbox {
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #d9d9d9;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    width: auto;
+    height: 34px;
+}
+
+tr.listoddbox td {
+    border-right: 1px solid #D9D9D9;
+}
+
+tr.listevenbox td {
+    border-right: 1px solid #D9D9D9;
+}
+
+.list-boxtitle1 {
+    width: auto;
+    min-height: 34px;
+    background-image: url(../images/boxtitle.gif);
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #D9D9D9;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    font-family: arial;
+    font-size: 16px;
+    font-weight: bold;
+    color: #B81B21;
+    line-height: 34px;
+    text-shadow: 1px 1px 1px #ffffff;
+}
+
+#resultDetailsOfIncomeInvoice div.fieldcontain label, #resultDetailsOfExpenseInvoice div.fieldcontain label {
+    width: 136px !important;
+    margin: 0;
+}
+
+.ajaxAction_inner div.fieldcontain label {
+    display: block;
+    height: auto;
+    line-height: normal;
+    text-align: left;
+    width: auto !important;
+}
+/*///////////////////////////////////////////////////////////*/
+.list-boxtitle.new-boxtitle {
+    border: 1px solid #dddddd;
+}
+.content.white-background {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #ffffff;
+    margin-bottom: 0;
+}
+.content.dimension {
+    width: 99.8%;
+}
+.boxouter{
+    background: none repeat scroll 0 0 #f7f5f5;
+    border-radius: 0 0 3px 3px;
+}
+.boxouter.boxouter-modified{
+    border: 1px solid #dddddd;
+    padding: 1px 0;
+}
+
+#mega-menu-1 li ul {display: none;}
+#mega-menu-1 .sub ul {display: block;}
+
+.journalDes {
+    float: left;
+}
+.required-indicator.descriptionReq {
+    margin-top: 7px;
+}
+.descriptionBox {
+    margin-left: 7px;
+}
+
+
+
+
