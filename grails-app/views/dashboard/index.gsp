@@ -311,13 +311,48 @@
         </div>
 
         <div class="comboOptionSelection">
-
             <div class="comboDiv">
-                <%="${new CoreParamsHelper().getDropDownBudgetDetailsType('budgetType', '0')}"%>
+                <%
+                    def budgetDetailsDropdown = new CoreParamsHelper().getDropDownBudgetDetailsType('budgetType', '0')
+                %>
+                <select onchange="onChangeBudgetDetails(this.value)" class="styled sidebr01" name="budgetType" id="budgetType">
+                %{-- <option value="">- no select -</option>--}%
+                    <g:each in="${budgetDetailsDropdown}" var="opt">
+                        <g:if test="${budgetDetailsDropdown.size() > 0}">
+                            <g:if test="${opt.inSelected}">
+                                <option selected value="${opt.value}">${opt.index}</option>
+                            </g:if>
+                            <g:else>
+                                <option value="${opt.value}">${opt.index}</option>
+                            </g:else>
+                        </g:if>
+                        <g:else>
+                            <option value="0">"No items.."</option>
+                        </g:else>
+                    </g:each>
+                </select>
             </div>
 
             <div class="comboDiv">
-                <%="${new CoreParamsHelper().getDropDownBudgetDetailsSortType('budgetSortType', '0')}"%>
+                <%
+                    def budgetDetailsSortDropdown = new CoreParamsHelper().getDropDownBudgetDetailsSortType('budgetSortType', '0')
+                %>
+                <select onchange="onChangeBudgetDetailsSortType(this.value)" class="styled sidebr01" name="budgetSortType" id="budgetSortType">
+                %{-- <option value="">- no select -</option>--}%
+                    <g:each in="${budgetDetailsSortDropdown}" var="opt">
+                        <g:if test="${budgetDetailsSortDropdown.size() > 0}">
+                            <g:if test="${opt.inSelected}">
+                                <option selected value="${opt.value}">${opt.index}</option>
+                            </g:if>
+                            <g:else>
+                                <option value="${opt.value}">${opt.index}</option>
+                            </g:else>
+                        </g:if>
+                        <g:else>
+                            <option value="0">"No items.."</option>
+                        </g:else>
+                    </g:each>
+                </select>
             </div>
 
         </div>

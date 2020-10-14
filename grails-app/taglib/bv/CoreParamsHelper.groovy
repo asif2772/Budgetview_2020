@@ -7521,6 +7521,8 @@ class CoreParamsHelper {
 
         def g = new ValidationTagLib()
         ArrayList mapTypeArr = new ArrayList()
+        List list = new ArrayList()
+
         mapTypeArr = [
                 ['incNexp', g.message(code: 'bv.dashboard.income&Expense.dropdown')],
                 ['income', g.message(code: 'bv.dashboard.income.dropdown')],
@@ -7531,50 +7533,38 @@ class CoreParamsHelper {
 
         ]
 
-        String dropDown = "<select class=\"styled sidebr01\" id=\"${returnIndex}\" onchange=\"onChangeBudgetDetails(this.value)\" name=\"${returnIndex}\">"
-
         if (mapTypeArr.size()) {
             for (int i = 0; i < mapTypeArr.size(); i++) {
+                def isSelected= null
 
                 if (selectIndex == mapTypeArr[i][0]) {
-                    dropDown += "<option value='" + mapTypeArr[i][0] + "' selected>" + mapTypeArr[i][1] + "</option>"
+                    isSelected = mapTypeArr[i][0]
 
-                } else {
-                    dropDown += "<option value='" + mapTypeArr[i][0] + "' >" + mapTypeArr[i][1] + "</option>"
                 }
+                list.add("value": mapTypeArr[i][0], "index": mapTypeArr[i][1],"isSelected":isSelected)
             }
-
         }
-
-        dropDown += "</select>"
-        return dropDown
+        return list
     }
 
     def getDropDownBudgetDetailsSortType(returnIndex, selectIndex) {
 
         def g = new ValidationTagLib()
         ArrayList mapTypeArr = new ArrayList()
+        List list = new ArrayList()
         mapTypeArr = [['name_wise', g.message(code: 'bv.dashboard.nameWise.dropdown')],
                       ['acc_head_wise', g.message(code: 'dashboard.accountHeadWise.label')]
         ]
-
-        String dropDown = "<select class=\"styled sidebr01\" id=\"${returnIndex}\" onchange=\"onChangeBudgetDetailsSortType(this.value)\" name=\"${returnIndex}\">"
-
         if (mapTypeArr.size()) {
             for (int i = 0; i < mapTypeArr.size(); i++) {
-
+                def isSelected= null
                 if (selectIndex == mapTypeArr[i][0]) {
-                    dropDown += "<option value='" + mapTypeArr[i][0] + "' selected>" + mapTypeArr[i][1] + "</option>"
-
-                } else {
-                    dropDown += "<option value='" + mapTypeArr[i][0] + "' >" + mapTypeArr[i][1] + "</option>"
+                    isSelected = mapTypeArr[i][0]
                 }
+                list.add("value": mapTypeArr[i][0], "index": mapTypeArr[i][1],"isSelected":isSelected)
             }
-
         }
-
-        dropDown += "</select>"
-        return dropDown
+        return list
     }
 
     def getDropDownTaxReservationType(returnIndex, selectIndex) {
