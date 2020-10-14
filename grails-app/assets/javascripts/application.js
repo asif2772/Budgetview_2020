@@ -379,9 +379,11 @@ function checkSession() {
     if (localTime - timeOffset > (sessionExpiry-600*1000)) {
         if (Math.abs(getCookie('needToShowMsg'))) {
             setCookie('needToShowMsg', 0 ,1);
-            if(confirm(sessionExpMsg)){
+
+        // This added for run
+            /*if(confirm(sessionExpMsg)){
                 top.location.href = top.location.href;
-            }
+            }*/
         }
     } else {
         setTimeout('checkSession()', 10000);

@@ -25,17 +25,22 @@
     <g:set var="entityName" value="${message(code: 'dashboard.label', default: 'Dashboard')}"/>
     <title><g:message code="default.name.label" args="[entityName]"/></title>
 
-    <g:javascript>
+    <script>
         var sesStorage = window.sessionStorage;
 
         function onChangeBudgetDetails(budgetType) {
             showButton();
             var url = "";
-            var sortType = document.getElementById("budgetSortType").value;
+            // var sortType = document.getElementById("budgetSortType").value;
+
+            // This added for run
+            var sortType = 'name_wise';
 
 //            alert("Budget Details: "+ budgetType);
             if(budgetType == "incNexp"){
-            document.getElementById("budgetSortType").disabled = false;
+
+                // This added for run
+            // document.getElementById("budgetSortType").disabled = false;
                 if(sortType == "name_wise"){
                     url = '${protocol}' + '${host}' + ":" + '${port}' + '${context}' + "/dashboardDetails/incomeAndExpenseNameWise";
                 }else if(sortType == "acc_head_wise"){
@@ -45,7 +50,9 @@
                 document.getElementById("ifrmBudgetDetails").src = url
             }
             else if(budgetType == "income"){
-            document.getElementById("budgetSortType").disabled = false;
+
+                // This added for run
+            // document.getElementById("budgetSortType").disabled = false;
                 if(sortType == "name_wise"){
                     url = '${protocol}' + '${host}' + ":" + '${port}' + '${context}' + "/dashboardDetails/incomeCustomerWise";
                 }else if(sortType == "acc_head_wise"){
@@ -54,7 +61,9 @@
                 document.getElementById("ifrmBudgetDetails").src = url
             }
             else if(budgetType == "expense"){
-                document.getElementById("budgetSortType").disabled = false;
+
+                // This added for run
+                // document.getElementById("budgetSortType").disabled = false;
                 if(sortType == "name_wise"){
                     url = '${protocol}' + '${host}' + ":" + '${port}' + '${context}' + "/dashboardDetails/expanseVendorWise";
                 }else if(sortType == "acc_head_wise"){
@@ -71,7 +80,9 @@
                 document.getElementById("ifrmBudgetDetails").src = url
             }
             else if(budgetType == "reserve"){
-                document.getElementById("budgetSortType").disabled = false;
+
+                // This added for run
+                // document.getElementById("budgetSortType").disabled = false;
                 if(sortType == "name_wise"){
                     url = '${protocol}' + '${host}' + ":" + '${port}' + '${context}' + "/dashboardDetails/reservationNameWise";
                 }else if(sortType == "acc_head_wise"){
@@ -100,7 +111,9 @@
 
         function onChangeBudgetDetailsSortType(sortType){
             var url = "";
-            var budgetType = document.getElementById("budgetType").value;
+            // This added for run
+            // var budgetType = document.getElementById("budgetType").value;
+            var budgetType = 'income';
             //alert("Budget Details: "+ budgetType);
             if(sortType == "name_wise"){
                 if(budgetType == "incNexp"){
@@ -156,7 +169,10 @@
         });
 
         function showButton(){
-            var budgetType = document.getElementById("budgetType").value;
+            // var budgetType = document.getElementById("budgetType").value;
+
+            // This added for run
+           var budgetType = 'income';
 
             if(budgetType == 'incNexp' || budgetType == 'income' || budgetType == 'expense' ){
 //            alert(budgetType);
@@ -176,7 +192,7 @@
             }
         }
 
-    </g:javascript>
+    </script>
 </head>
 
 <body style="zoom:100%;-moz-transform: scale(2);">

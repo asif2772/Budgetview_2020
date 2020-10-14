@@ -2226,7 +2226,7 @@ class CoreParamsHelper {
         } else if (prefix == "J") {
             maxIdArr = new BudgetViewDatabaseService().executeQuery("SELECT MAX(id) FROM bv.JournalEntry")
         } else if (prefix == "Q") {
-            maxIdArr = new BudgetViewDatabaseService().executeQuery("SELECT MAX(id) FROM bv.QuickEntry")
+            maxIdArr = new BudgetViewDatabaseService().executeQuery("SELECT MAX(id) FROM bv.QuickEntryUtil")
         } else if (prefix == "EXP") {
             maxIdArr = new BudgetViewDatabaseService().executeQuery("SELECT MAX(id) FROM bv.BudgetItemExpense")
         } else if (prefix == "INC") {
@@ -3941,7 +3941,7 @@ class CoreParamsHelper {
         def Prefix = PrefixDataArr[0][0]
         def PrefixLength = PrefixDataArr[0][1]
         ///////////////////MAX PRODUCT ID/////
-        def JournalDataArr = new BudgetViewDatabaseService().executeQuery("SELECT MAX(id) FROM bv.QuickEntry")
+        def JournalDataArr = new BudgetViewDatabaseService().executeQuery("SELECT MAX(id) FROM bv.QuickEntryUtil")
 
         def newSequence
         if (JournalDataArr[0]) {
